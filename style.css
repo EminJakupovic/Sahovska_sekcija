@@ -1,0 +1,583 @@
+**{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+     background-image: url(../images/background_image.png);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+    }
+
+  header {
+   background-color: #000000;
+   padding: 40px 0;
+  }
+  .menu {
+   
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   top: 15px;
+  }
+  .menu li {
+   
+   margin: 0 15px;
+   position: relative;
+  }
+  .menu li a {
+   text-decoration: none;
+   color: black;
+   padding: 10px 15px;
+   border-radius: 5px;
+   position: relative;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .menu li a::after {
+   content: ''; 
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0;
+   height: 2px;
+   background-color: blue;
+   transition: width 0.3s ease;
+  }
+  
+  .menu li a:hover {
+   color: blue; 
+  }
+  
+  .menu li a:hover::after {
+   width: 100%; 
+  }
+
+  
+  .navlogo {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 10px;
+    left: 0%;
+    margin-left: 10px;
+  }
+  
+  header {
+     background-color: transparent;
+     color: black;
+     text-align: center;
+     padding: 20px 0;
+  }
+  
+  header h1 {
+     margin: 0;
+  }
+  
+ 
+  
+  .inputBox_container {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   max-width: 14em;
+   width: fit-content;
+   height: fit-content;
+   background-color: #5c6370;
+   border-radius: 0.8em;
+   overflow: hidden;
+   position: absolute;
+   left: 1450px;
+   top: 30px;
+  }
+  
+  .search_icon {
+   height: 1em;
+   padding: 0 0.5em 0 0.8em;
+   fill: #abb2bf;
+  }
+  
+  .inputBox {
+   background-color: transparent;
+   color: #ffffff;
+   outline: none;
+   width: 100%;
+   border: 0;
+   padding: 0.5em 1.5em 0.5em 0;
+   font-size: 1em;
+  }
+  
+
+  
+ 
+  header {
+     background-color: gainsboro;
+     color: #333;
+     text-align: center;
+     padding: 20px 0;
+  }
+  
+  header h1 {
+     margin: 0;
+  }
+  
+  header {
+    height: 100px;
+  }
+
+
+/* ----------------------------------------------------------------*/
+
+.news-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.news-item {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-title {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.news-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 10px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.news-button:hover {
+    background-color: darkblue;
+}
+
+.news-button2 {
+   background-color: blue;
+   color: white;
+   border: none;
+   border-radius: 10%;
+   padding: 10px 10px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.news-button2:hover {
+   background-color: darkblue;
+}
+
+.news-button3 {
+   background-color: blue;
+   color: white;
+   border: none;
+   border-radius: 10%;
+   padding: 10px 10px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.news-button3:hover {
+   background-color: darkblue;
+}
+
+
+
+#rank-list {
+   width: 60%;
+   margin: 50px auto;
+   position: relative;
+   bottom: 100px;
+   border-radius: 30px; 
+   overflow: hidden; 
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   border-radius: 20px; 
+}
+
+th, td {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+}
+
+tr:nth-child(even) {
+   background-color: gainsboro; 
+   color: black; 
+}
+
+tr:nth-child(odd) {
+   background-color: #ffffff; 
+   color: #000000; }
+
+th {
+   background-color: black;
+   color: white;
+}
+
+footer {
+   background-color: #ccc;
+   text-align: center;
+   font-size: 12px;
+   padding: 10px 0; 
+   line-height: 1.5;
+}
+
+footer h4 {
+   margin: 5px 0;
+   font-weight: normal; 
+}
+html {
+   scroll-behavior: smooth;
+}
+
+/* Dio za vijesti */
+.news-content {
+   background-color: #f9f9f9;
+   padding: 40px 0;
+}
+
+.news-article {
+   background-color: white;
+   border-radius: 15px;
+   padding: 30px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-title {
+   font-size: 2em;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.news-date {
+   color: #888;
+   font-size: 0.9em;
+   margin-bottom: 20px;
+}
+
+.news-text {
+   font-size: 1.2em;
+   line-height: 1.6;
+   color: #555;
+}
+
+
+@media (max-width: 600px) {
+   /* Stilovi za mobilne uređaje */
+   header {
+      font-size: 14px;
+   }
+   .navlogo {
+      visibility: hidden;
+   }
+
+}
+
+#checkbox {
+   display: none;
+ }
+ 
+ .toggle {
+   position: absolute;
+   left: 90%;
+   bottom: 90%;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   transition-duration: .3s;
+ }
+ 
+ .bars {
+   width: 100%;
+   height: 4px;
+   background-color: #000000;
+   border-radius: 5px;
+   transition-duration: .3s;
+
+ }
+ 
+ /* #checkbox:checked + .toggle .bars {
+   margin-left: 13px;
+ } */
+ 
+ #checkbox:checked + .toggle #bar2 {
+   transform: translateY(14px) rotate(60deg);
+   margin-left: 0;
+   transform-origin: right;
+   transition-duration: .3s;
+   z-index: 2;
+ }
+ 
+ #checkbox:checked + .toggle #bar1 {
+   transform: translateY(28px) rotate(-60deg);
+   transition-duration: .3s;
+   transform-origin: left;
+   z-index: 1;
+ }
+ 
+ #checkbox:checked + .toggle {
+   transform: rotate(-90deg);
+ }
+ /* #checkbox:checked + .toggle #bar3 {
+   transform: rotate(90deg);
+   transition-duration: .3s;
+   transform-origin:right;
+ } */
+ 
+
+ .toggle {
+   display: none;
+   cursor: pointer;
+   position: absolute;
+   right: 10px;
+   top: 32px;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 30px;
+   width: 30px;
+}
+
+.bars {
+   width: 100%;
+   height: 4px;
+   background-color: #000;
+   border-radius: 5px;
+}
+
+/* Mobile meni, skriven u početku */
+.mobile-menu {
+   display: none;
+   background-color: #f4f4f4;
+   position: absolute;
+   top: 80px;
+   right: 0;
+   width: 100%;
+   text-align: center;
+}
+
+.mobile-menu ul {
+   list-style: none;
+   padding: 10px 0;
+}
+
+.mobile-menu li {
+   margin: 10px 0;
+}
+
+.mobile-menu li a {
+   text-decoration: none;
+   color: black;
+   padding: 10px 15px;
+}
+
+/* Ponašanje pri aktivaciji hamburger menija */
+#checkbox:checked + .toggle + .mobile-menu {
+   display: block;
+}
+
+#checkbox:checked + .toggle #bar1 {
+   transform: rotate(45deg) translate(5px, 5px);
+}
+
+#checkbox:checked + .toggle #bar2 {
+   opacity: 0;
+}
+
+#checkbox:checked + .toggle #bar3 {
+   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries za mobilne uređaje */
+@media (max-width: 600px) {
+   .menu {
+       display: none;
+   }
+
+   .toggle {
+       display: flex;
+   }
+
+   .navlogo {
+       left: 10px;
+       top: 10px;
+       visibility: visible;
+   }
+   .footerlogo {
+       width: 50px;
+       height: 50px;
+   }
+}
+
+
+/* Calendar CSS */
+.calendar {
+   width: 300px;
+   border: 2px solid #000;
+   padding: 20px;
+   background-color: #ffffff;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.calendar header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.calendar header button {
+   background: none;
+   border: none;
+   font-size: 18px;
+   cursor: pointer;
+   font-weight: bold;
+   color: #000;
+}
+
+.calendar header h2 {
+   font-size: 20px;
+}
+
+.days {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   gap: 5px;
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+.day {
+   width: 35px;
+   height: 35px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid #000;
+}
+
+.today {
+   background-color: #000;
+   color: #fff;
+}
+
+.weekdays {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   gap: 5px;
+   font-weight: bold;
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button {
+   display: block;
+   justify-content: center;
+   align-items: center;
+   padding: 9px 12px;
+   gap: 8px;
+   height: 40px;
+   width: 201px;
+   border: none;
+   background: #000a53;
+   border-radius: 20px;
+   cursor: pointer;
+   text-align: center;
+   margin: 0 auto;
+ }
+ 
+ .lable {
+   line-height: 22px;
+   font-size: 17px;
+   color: #fff;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+ }
+ 
+ .button:hover {
+   background: #000000;
+ }
+ 
+ .button:hover .svg-icon {
+   animation: slope 1s linear infinite;
+ }
+ 
+ @keyframes slope {
+   0% {
+   }
+ 
+   50% {
+     transform: rotate(10deg);
+   }
+ 
+   100% {
+   }
+ }
+
+
+
+.footerlogo {
+    width: 100px;
+    height: 100px;
+}
+
+
+ .day.tuesday {
+   background-color: #f0e68c; /* Svetla pozadina za utorke */
+   pointer-events: none; /* Onemogućava interakciju sa danima */
+   color: #333; /* Promena boje teksta */
+}
