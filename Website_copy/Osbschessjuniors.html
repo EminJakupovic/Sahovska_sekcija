@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobrodošli - OSBS Chess Juniors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo-hi-rez-removebg-preview.png" type="image/x-icon">
+    <meta name="keywords" content="OSBS, osbs, Osbschessjuniors, sahovskasekcijaosbs, Osnovna škola Behaudin Selmanović, Osnovna skola Behaudin Selmanovic">
+</head>
+
+    <header>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Početna</a></li> 
+                <li><a href="#news">Novosti</a></li>
+                <li><a href="#rank-list">Rank lista</a></li>
+                <li><a href="https://osbs.edu.ba/" target="_blank">Škola</a></li>
+            </ul>
+            <img src="logo-hi-rez-removebg-preview.png" alt="Logo" class="navlogo">
+                        <input id="checkbox" type="checkbox">
+            <label class="toggle" for="checkbox">
+                <div id="bar1" class="bars"></div>
+                <div id="bar2" class="bars"></div>
+                <div id="bar3" class="bars"></div>
+            </label>
+        
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#home">Početna</a></li> 
+                    <li><a href="#news">Novosti</a></li>
+                    <li><a href="#rank-list">Rank lista</a></li>
+                    <li><a href="https://osbs.edu.ba/" target="_blank">Škola</a></li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+<body>
+    <section id="news" class="news-section">
+        <div class="news-container">
+            <div class="news-item">
+                <img src="logo-hi-rez-removebg-preview.png" alt="News 1" class="news-image">
+                <h3 class="news-title"> Prvo kolo je krenulo -  Statistike uživo! 🔴 </h3>
+                <a href="news1.html"><button class="news-button">Saznaj više</button></a>
+            </div>
+            <div class="news-item">
+                <img src="pobjednici.jpg" alt="News 2" class="news-image">
+                <h3 class="news-title">Peta sezona OSBS Chess Juniors lige gotova!</h3>
+                <a href="news2.html"><button class="news-button2">Saznaj više</button></a>
+            </div>
+            <div class="news-item">
+                <img src="dame.jpeg.jpg" alt="News 3" class="news-image">
+                <h3 class="news-title">Šahovska sekcija kreće uskoro! </h3>
+                <a href="news3.html"><button class="news-button3">Saznaj više</button></a>
+            </div>
+        </div>
+    </section>    
+   <!--Kalendar-->
+    <br><br><br><br>
+    <button class="button" onclick="toggleCalendar()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="svg-icon">
+            <g stroke-width="2" stroke-linecap="round" stroke="#fff">
+                <rect y="5" x="4" width="16" rx="2" height="16"></rect>
+                <path d="m8 3v4"></path>
+                <path d="m16 3v4"></path>
+                <path d="m4 11h16"></path>
+            </g>
+        </svg>
+        <span class="lable">View Calendar</span>
+    </button> <br>
+    
+    <div class="calendar" style="display: none;">
+        <header>
+            <button onclick="prevMonth()">&#9664;</button>
+            <h2 id="month-year"></h2>
+            <button onclick="nextMonth()">&#9654;</button>
+        </header>
+        <div class="weekdays">
+            <div>Pon</div>
+            <div>Uto</div>
+            <div>Sri</div>
+            <div>Čet</div>
+            <div>Pet</div>
+            <div>Sub</div>
+            <div>Ned</div>
+        </div>
+        <div class="days" id="calendar-days"></div>
+    </div>
+    
+    <script src="script.js"></script>
+
+
+    <br><br><br><br>
+    
+    
+    
+    
+    <!----------------------------Rank lista ------------------------------->
+
+    <body id="ranklistbody">
+        <div id="rank-list">
+            <h1 class="ranklistaigraca" align="center">Rang lista</h1> <br><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Igrač</th>
+                        <th>Poeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Emin Jakupović</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Daris Čarković</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Onur Huseinbašić</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Muhammed Durmo</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Dženan Rahman</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lamia Vehabović</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Nedžla Huseinbašić</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Merjem Selimović</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Davud Šahinović</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Ahmed Grabus</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</body>
+<footer>
+    <br><br>
+
+   <h4>@Copyright 2024</h2>
+    <h4>Osnovna škola "Behaudin Selmanović"</h4>
+    <h4>OSBS Chess Juniors 2023 - present</h4>
+    <br><br>
+</footer>
+</html>
