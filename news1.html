@@ -101,94 +101,101 @@
             background-color:rgb(243, 156, 76);
         }
         * {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .bracket-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 30px;
+        }
+
+        .round h3 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .match {
+            width: 150px;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .connector {
+            width: 30px;
+            height: 2px;
+            background-color: #ccc;
+            position: absolute;
+            right: -30px;
+            top: 20px;
+        }
+
+        .connector-vertical {
+            width: 2px;
+            height: 55px;
+            background-color: #ccc;
+            position: absolute;
+            right: -15px;
+            top: -25px;
+        }
+
+        .final {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 40px;
+        }
+
+        .champion {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffa500;
+            margin-top: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trophy-icon {
+            font-size: 24px;
+            color: #ffa500;
+        }
 
 
 
 
 
 
-            * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .road-container {
-    max-width: 1000px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .road-header {
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 40px;
-  }
-  
-  .bracket {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-  }
-  
-  .round {
-    width: 30%;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .matchup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .teamknock {
-    background-color: #0080ff;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-  }
-  
-  .vs {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 15px;
-  }
-  
-  @media (max-width: 768px) {
-    .bracket {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .round {
-      width: 80%;
-      margin-bottom: 30px;
-    }
-  
-    .matchup {
-      flex-direction: column;
-    }
-  
-    .vs {
-      margin: 10px 0;
-    }
-  }
-  
     </style>
 </head>
 <body>
@@ -372,58 +379,46 @@
         </tr>
     </table>
 
-  <div class="road-container">
-    <h1 class="road-header">Put do finala! - Turnir "Čarolija strategije"</h1>
-
-    <div class="bracket">
-      <div class="round quarter-finals">
-        <h2>Četvrt-Finale</h2>
-        <div class="matchup">
-          <div class="teamknock">Team 1</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Team 2</div>
-        </div>
-        <div class="matchup">
-          <div class="teamknock">Team 3</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Team 4</div>
-        </div>
-        <div class="matchup">
-          <div class="teamknock">Team 5</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Team 6</div>
-        </div>
-        <div class="matchup">
-          <div class="teamknock">Team 7</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Team 8</div>
-        </div>
-      </div>
-
-      <div class="round semi-finals">
-        <h2>Polu-Finale</h2>
-        <div class="matchup">
-          <div class="teamknock">Winner QF1</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Winner QF2</div>
-        </div>
-        <div class="matchup">
-          <div class="teamknock">Winner QF3</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Winner QF4</div>
-        </div>
-      </div>
-
-      <div class="round final">
-        <h2>Finale</h2>
-        <div class="matchup">
-          <div class="teamknock">Winner SF1</div>
-          <div class="vs">vs</div>
-          <div class="teamknock">Winner SF2</div>
-        </div>
-      </div>
+<div class="bracket-container">
+    <!-- Round of 16 -->
+    <div class="round">
+        <h3>Round of 16</h3>
+        <div class="match">Team 1<div class="connector"></div></div>
+        <div class="match">Team 2<div class="connector"></div></div>
+        <div class="match">Team 3<div class="connector"></div></div>
+        <div class="match">Team 4<div class="connector"></div></div>
+        <div class="match">Team 5<div class="connector"></div></div>
+        <div class="match">Team 6<div class="connector"></div></div>
+        <div class="match">Team 7<div class="connector"></div></div>
+        <div class="match">Team 8<div class="connector"></div></div>
     </div>
-  </div>
+
+    <!-- Quarterfinals -->
+    <div class="round">
+        <h3>Quarterfinals</h3>
+        <div class="match">Winner 1<div class="connector"></div><div class="connector-vertical"></div></div>
+        <div class="match">Winner 2<div class="connector"></div><div class="connector-vertical"></div></div>
+        <div class="match">Winner 3<div class="connector"></div><div class="connector-vertical"></div></div>
+        <div class="match">Winner 4<div class="connector"></div><div class="connector-vertical"></div></div>
+    </div>
+
+    <!-- Semifinals -->
+    <div class="round">
+        <h3>Semifinals</h3>
+        <div class="match">Winner A<div class="connector"></div><div class="connector-vertical"></div></div>
+        <div class="match">Winner B<div class="connector"></div><div class="connector-vertical"></div></div>
+    </div>
+
+    <!-- Final -->
+    <div class="final">
+        <h3>Final</h3>
+        <div class="match">Champion</div>
+        <div class="champion">
+            <span class="trophy-icon">🏆</span>
+            Champion
+        </div>
+    </div>
+</div>
 
 
 
