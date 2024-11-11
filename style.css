@@ -568,7 +568,9 @@ html {
    }
  }
 
-
+.programmers {
+    color: black;
+ }
 
 .footerlogo {
     width: 100px;
