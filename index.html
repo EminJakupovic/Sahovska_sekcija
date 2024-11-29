@@ -183,7 +183,57 @@
 </body>
 <footer>
     <br><br>
+<canvas id="snowCanvas"></canvas>
 
+<script>
+    // Snijeg Efekt
+    const canvas = document.getElementById('snowCanvas');
+    const ctx = canvas.getContext('2d');
+    const snowflakes = [];
+
+    // Podešavanje canvas dimenzija
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Snijeg (flakovi)
+    function createSnowflake() {
+        snowflakes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 4 + 1, 
+            speed: Math.random() * 2 + 0.5
+        });
+    }
+
+    function updateSnowflakes() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Čisti canvas
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.beginPath();
+
+        snowflakes.forEach((flake, index) => {
+            ctx.moveTo(flake.x, flake.y);
+            ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+
+            // Ažuriraj poziciju flake
+            flake.y += flake.speed;
+
+            // Ako flake dođe do dna, resetuj ga na vrh
+            if (flake.y > canvas.height) {
+                snowflakes[index] = { ...flake, y: -flake.radius };
+            }
+        });
+
+        ctx.fill();
+        requestAnimationFrame(updateSnowflakes);
+    }
+
+    // Generiši sneg
+    for (let i = 0; i < 200; i++) {
+        createSnowflake();
+    }
+
+    updateSnowflakes();
+</script>
    <h4>@Copyright 2024</h2>
     <h4>Osnovna škola "Behaudin Selmanović"</h4>
     <h4>OSBS Chess Juniors 2023 - present</h4>
