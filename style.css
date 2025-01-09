@@ -578,3 +578,104 @@ html {
    pointer-events: none; /* Onemogućava interakciju sa danima */
    color: #333; /* Promena boje teksta */
 }
+
+
+
+        footer {
+            background-color: #06206A;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+.footer-column {
+   flex: 50px;
+   margin: 10px;
+   width: 100px;
+}
+.footer-column img {
+   width: 300px;
+}
+.footer-column h3 {
+   font-size: 18px;
+   margin-bottom: 5px;
+   border-bottom: 2px solid #fff;
+   display: inline-block;
+   padding-bottom: 5px;
+}
+
+.footer-column ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer-column ul li {
+   margin: 10px 0;
+}
+
+.footer-column ul li a {
+   text-decoration: none;
+   color: #ddd;
+   transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+   color: #00bcd4;
+}
+
+.footer-social {
+   display: flex;
+   gap: 15px;
+   margin-top: 5px;
+}
+
+.footer-social a {
+   text-decoration: none;
+   color: #fff;
+   font-size: 18px;
+   transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+   transform: scale(1.2);
+   color: #00bcd4;
+}
+
+.footer-bottom {
+   text-align: center;
+   margin-top: 30px;
+   border-top: 1px solid #ddd;
+   padding-top: 15px;
+   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+   .footer-container {
+       flex-direction: column;
+       text-align: center;
+   }
+
+   .footer-column {
+       flex: 1 1 100%;
+       display: flex;
+       flex-direction: column;
+       align-content: center;
+       justify-content: center;
+       position: relative;
+       left: 40%;
+   }
+
+   .footer-social {
+       justify-content: center;
+   }
+   .footer-column img {
+      width: 100px;
+   }
+}
