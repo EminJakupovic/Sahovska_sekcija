@@ -2,14 +2,7 @@
     margin: 0;
     padding: 0;
   }
-  body{
-     background-image: url(snow.jpg);
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
 
-
-    }
 
   header {
 
@@ -116,7 +109,6 @@
   
  
   header {
-     background-color: gainsboro;
      color: #333;
      text-align: center;
      padding: 20px 0;
@@ -128,6 +120,7 @@
   
   header {
     height: 100px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1); 
   }
 
 
