@@ -30,6 +30,85 @@
             transform: translateY(-5px);
 
         }
+           footer {
+  background-color: #1c1c1c; 
+  color: #e0e0e0; 
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 200px;
+}
+
+.footer-description {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-description h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff; 
+}
+
+.footer-description p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #b0b0b0; 
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: red; 
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons a {
+  color: #e0e0e0;
+  font-size: 1.8em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: red; 
+  transform: scale(1.1); 
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #777777; 
+  border-top: 1px solid #333333;
+  padding-top: 15px;
+}
+
     </style>
 </head>
 
@@ -118,7 +197,7 @@
     
     <script src="script.js"></script>
 
-
+    
     <br><br><br><br>
 
     
@@ -190,6 +269,36 @@
             </table>
         </div>
     </body>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-description">
+            <h3>Šahovska sekcija</h3>
+            <p>Naša šahovska sekcija promoviše logičko razmišljanje, sportski duh i ljubav prema šahu. Pridružite se i postanite dio naše zajednice!</p>
+          </div>
+          <div class="footer-links">
+            <nav>
+              <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="news1.html">Novosti</a></li>
+                <li><a href="#rank-list">Rank lista</a></li>
+                <li><a href="https://osbs.edu.ba/">Naša škola</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-icons">
+            <a href="https://www.facebook.com/behaudin.selmanovic" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/@chess" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Šahovska sekcija OSBS - Osnovna škola "Behaudin Selmanović" Sva prava zadržana.</p>
+        </div>
+      </footer>
+      
 </body>
 
 </html>
