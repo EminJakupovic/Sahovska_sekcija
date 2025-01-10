@@ -108,7 +108,88 @@
   border-top: 1px solid #333333;
   padding-top: 15px;
 }
+@media (max-width: 600px) {
+footer {
+  background-color: #1c1c1c; 
+  color: #e0e0e0; 
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
 
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 200px;
+}
+
+.footer-description {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-description h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #ffffff; 
+}
+
+.footer-description p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #b0b0b0; 
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: red; 
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons a {
+  color: #e0e0e0;
+  font-size: 1.8em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: red; 
+  transform: scale(1.1); 
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #777777; 
+  border-top: 1px solid #333333;
+  padding-top: 15px;
+}
+
+}
     </style>
 </head>
 
