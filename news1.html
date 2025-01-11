@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turnir "Čarolija Strategije" - Stats</title>
     <link rel="icon" href="logo-hi-rez-removebg-preview.png" type="image/x-icon">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +17,268 @@
             flex-direction: column;
             margin: 20px;
         }
+
+.menu {
+
+display: flex;
+justify-content: center;
+list-style: none;
+margin: 0;
+padding: 0;
+position: relative;
+top: 15px;
+}
+.menu li {
+
+margin: 0 15px;
+position: relative;
+}
+.menu li a {
+text-decoration: none;
+color: black;
+padding: 10px 15px;
+border-radius: 5px;
+position: relative;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu li a::after {
+content: ''; 
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background-color: blue;
+transition: width 0.3s ease;
+}
+
+.menu li a:hover {
+color: blue; 
+}
+
+.menu li a:hover::after {
+width: 100%; 
+}
+
+
+.navlogo {
+ width: 75px;
+ height: 75px;
+ position: absolute;
+ top: 10px;
+ left: 0%;
+ margin-left: 10px;
+}
+
+header {
+  background-color: transparent;
+  color: black;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+
+
+.inputBox_container {
+display: flex;
+align-items: center;
+flex-direction: row;
+max-width: 14em;
+width: fit-content;
+height: fit-content;
+background-color: #5c6370;
+border-radius: 0.8em;
+overflow: hidden;
+position: absolute;
+left: 1450px;
+top: 30px;
+}
+
+.search_icon {
+height: 1em;
+padding: 0 0.5em 0 0.8em;
+fill: #abb2bf;
+}
+
+.inputBox {
+background-color: transparent;
+color: #ffffff;
+outline: none;
+width: 100%;
+border: 0;
+padding: 0.5em 1.5em 0.5em 0;
+font-size: 1em;
+}
+
+
+@media (max-width: 600px) {
+   /* Stilovi za mobilne uređaje */
+   header {
+      font-size: 14px;
+   }
+   .navlogo {
+      visibility: hidden;
+   }
+
+}
+
+#checkbox {
+   display: none;
+ }
+ 
+ .toggle {
+   position: absolute;
+   left: 90%;
+   bottom: 90%;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   transition-duration: .3s;
+ }
+ 
+ .bars {
+   width: 100%;
+   height: 4px;
+   background-color: #000000;
+   border-radius: 5px;
+   transition-duration: .3s;
+
+ }
+ 
+ /* #checkbox:checked + .toggle .bars {
+   margin-left: 13px;
+ } */
+ 
+ #checkbox:checked + .toggle #bar2 {
+   transform: translateY(14px) rotate(60deg);
+   margin-left: 0;
+   transform-origin: right;
+   transition-duration: .3s;
+   z-index: 2;
+ }
+ 
+ #checkbox:checked + .toggle #bar1 {
+   transform: translateY(28px) rotate(-60deg);
+   transition-duration: .3s;
+   transform-origin: left;
+   z-index: 1;
+ }
+ 
+ #checkbox:checked + .toggle {
+   transform: rotate(-90deg);
+ }
+ /* #checkbox:checked + .toggle #bar3 {
+   transform: rotate(90deg);
+   transition-duration: .3s;
+   transform-origin:right;
+ } */
+ 
+
+ .toggle {
+   display: none;
+   cursor: pointer;
+   position: absolute;
+   right: 10px;
+   top: 32px;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 30px;
+   width: 30px;
+}
+
+.bars {
+   width: 100%;
+   height: 4px;
+   background-color: #000;
+   border-radius: 5px;
+}
+
+/* Mobile meni, skriven u početku */
+.mobile-menu {
+   display: none;
+   background-color: #f4f4f4;
+   position: absolute;
+   top: 80px;
+   right: 0;
+   width: 100%;
+   text-align: center;
+}
+
+.mobile-menu ul {
+   list-style: none;
+   padding: 10px 0;
+}
+
+.mobile-menu li {
+   margin: 10px 0;
+}
+
+.mobile-menu li a {
+   text-decoration: none;
+   color: black;
+   padding: 10px 15px;
+}
+
+/* Ponašanje pri aktivaciji hamburger menija */
+#checkbox:checked + .toggle + .mobile-menu {
+   display: block;
+}
+
+#checkbox:checked + .toggle #bar1 {
+   transform: rotate(45deg) translate(5px, 5px);
+}
+
+#checkbox:checked + .toggle #bar2 {
+   opacity: 0;
+}
+
+#checkbox:checked + .toggle #bar3 {
+   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries za mobilne uređaje */
+@media (max-width: 600px) {
+   .menu {
+       display: none;
+   }
+
+   .toggle {
+       display: flex;
+   }
+
+   .navlogo {
+       left: 20px;
+       top: 10px;
+       visibility: visible;
+   }
+   .footerlogo {
+       width: 50px;
+       height: 50px;
+   }
+}
+
+header {
+  color: #333;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header {
+ width: 100%;
+ height: 100px;
+}
 
         .group {
             width: 80%;
@@ -100,7 +363,7 @@
         .penu {
             background-color:rgb(243, 156, 76);
         }
-        * {
+        
 
 
         .bracket-container {
@@ -183,13 +446,63 @@
             color: #ffa500;
         }
 
+        
 
+        @media (max-width: 600px) {
+    .bracket-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .round, .final {
+        min-width: 100%;
+        margin: 5px 0;
+    }
 
+    .connector, .connector-vertical {
+        display: none;
+    }
+
+    .champion {
+        font-size: 1em;
+    }
+
+    .get-back {
+        width: 100%;
+        padding: 10px;
+    }
+}
 
 
     </style>
 </head>
+<header>
+        <br>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Početna</a></li> 
+            <li><a href="index.html">Novosti</a></li>
+            <li><a href="index.html">Rank lista</a></li>
+            <li><a href="https://osbs.edu.ba/" target="_blank">Škola</a></li>
+        </ul><br>
+        <img src="logo-hi-rez-removebg-preview.png" alt="Logo" class="navlogo">
+                    <input id="checkbox" type="checkbox">
+        <label class="toggle" for="checkbox">
+            <div id="bar1" class="bars"></div>
+            <div id="bar2" class="bars"></div>
+            <div id="bar3" class="bars"></div>
+        </label>
+    
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#home">Početna</a></li> 
+                <li><a href="#news">Novosti</a></li>
+                <li><a href="#rank-list">Rank lista</a></li>
+                <li><a href="https://osbs.edu.ba/" target="_blank">Škola</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
 <body>
     <br><br><br>
     <h1 align="center">TURNIR - Čarolija poteza ♞ </h1>
@@ -517,71 +830,233 @@
     </table>
 
 
-<div class="bracket-container">
-    <!-- Round of 16 -->
-        <div class="round">
-        <h3>Četvrt-Finale</h3>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
+    <div class="bracket-container">
+        <!-- Left Side -->
+        <div class="bracket-side">
+            <!-- Round of 32 -->
+            <div class="round">
+                <h3>Osmina Finala</h3>
+                <div class="match">Player 1</div>
+                <div class="match">Player 2</div>
+                <br>
+                <div class="match">Player 3</div>
+                <div class="match">Player 4</div>
+                <br>
+                <div class="match">Player 5</div>
+                <div class="match">Player 6</div>
+                <br>
+                <div class="match">Player 7</div>
+                <div class="match">Player 8</div>
+            </div>
+            
+            <!-- Round of 16 -->
+            <div class="round">
+                <h3>Četvrtina Finala</h3>
+                <div class="match">Winner 1</div>
+                <div class="match">Winner 2</div>
+                <br>
+                <div class="match">Winner 3</div>
+                <div class="match">Winner 4</div>
+            </div>
+            
+
+            <div class="round">
+                <h3>Polu-Finale</h3>
+                <div class="match">Winner 1</div>
+                <div class="match">Winner 2</div>
+            </div>
+            
+
+            <div class="round">
+                <h3>Finale</h3>
+                <div class="match">Winner 1</div>
+            </div>
+        </div>
+        
+
+        <div class="bracket-side">
+            <!-- Round of 32 -->
+            <div class="round">
+                <h3>Osmina Finala</h3>
+                <div class="match">Player 9</div>
+                <div class="match">Player 10</div>
+                <br>
+                <div class="match">Player 11</div>
+                <div class="match">Player 12</div>
+                <br>
+                <div class="match">Player 13</div>
+                <div class="match">Player 14</div>
+                <br>
+                <div class="match">Player 15</div>
+                <div class="match">Player 16</div>
+            </div>
+            
+            <!-- Round of 16 -->
+            <div class="round">
+                <h3>Četvrtina Finala</h3>
+                <div class="match">Winner 5</div>
+                <div class="match">Winner 6</div>
+                <br>
+                <div class="match">Winner 7</div>
+                <div class="match">Winner 8</div>
+            </div>
+            
+            <!-- Quarter-Finals -->
+            <div class="round">
+                <h3>Polu-Finale</h3>
+                <div class="match">Winner 3</div>
+                <div class="match">Winner 4</div>
+            </div>
+            
+            <!-- Semi-Finals -->
+            <div class="round">
+                <h3>Finale</h3>
+                <div class="match">Winner 2</div>
+            </div>
+        </div>
+        
+        <!-- Final -->
+        <div class="final">
+            <h3>POBJEDNIK</h3>
+            <div class="champion">
+                <span class="trophy-icon">🏆</span>
+                Champion
+            </div>
+        </div>
+        <br>
+        <a href="index.html" class="get-back-a"><button class="get-back">Vrati se nazad</button></a>
     </div>
     
-    <div class="round">
-        <h3>Četvrt-Finale</h3>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-        <div class="match"><div class="connector"></div></div>
-    </div>
+    <style>
+    .bracket-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: #9999991b; /* Boja footera */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bracket-side {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .round, .final {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    .round h3, .final h3 {
+        font-size: 1em; /* Smanji veličinu fonta */
+        margin-bottom: 10px;
+        color: #000000; /* Boja teksta */
+    }
+    
+    .match {
+        margin: 5px 0; /* Smanji margine */
+        padding: 5px; /* Smanji padding */
+        background-color: #007bff; /* Plava boja */
+        color: white; /* Boja teksta */
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    
+    .connector {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+    }
+    
+    .connector-vertical {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 2px;
+        height: 20px;
+        background-color: #333;
+    }
+    
+    .champion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em; /* Smanji veličinu fonta */
+        font-weight: bold;
+        color: #000000; /* Boja teksta */
+    }
+    
+    .trophy-icon {
+        margin-right: 10px;
+    }
+    
+    .get-back {
+        display: flex;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        justify-content: center;
+        align-content: center;
+        text-decoration: none;
+    }
+    .get-back-a {
+        text-decoration: none;
+    }
 
-    <!-- Quarterfinals -->
-    <div class="round">
-        <h3>Polu-Finale</h3>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-    </div>
-
-    <!-- Semifinals -->
-    <div class="round">
-        <h3>Finale</h3>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-        <div class="match"><div class="connector"></div><div class="connector-vertical"></div></div>
-    </div>
-
-    <!-- Final -->
-    <div class="final">
-        <h3>POBJEDNIK</h3>
-        <div class="match"></div>
-        <div class="champion">
-            <span class="trophy-icon">🏆</span>
-            Champion
-        </div>
-    </div>
-</div>
-<br>
-
-
-
-    <a href="index.html"><button class="get-back">Vrati se nazad</button></a>
+    .get-back:hover {
+        background-color: #000000;
+    }
+    
+    @media (max-width: 600px) {
+        .bracket-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .bracket-side {
+            width: 100%;
+        }
+    
+        .round, .final {
+            min-width: 100%;
+            margin: 5px 0;
+        }
+    
+        .connector, .connector-vertical {
+            display: none;
+        }
+    
+        .champion {
+            font-size: 1em;
+        }
+    
+        .get-back {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+    </style>
+        
+    </body>
+    </html>
+    
+    
     
 </body>
 </html>
