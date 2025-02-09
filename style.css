@@ -344,6 +344,7 @@ header {
 
     .hamburger {
         display: block;
+        padding-left: 15px;
     }
 
 
