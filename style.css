@@ -299,6 +299,12 @@ header {
         margin-top: 10px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     }
+    .slide-content h1 {
+        font-size: 20px;
+    }
+    .slide-content p {
+        font-size: 17px;
+    }
     body.light-mode .widget h2 {
         margin: 10px 0;
         font-size: 20px;
@@ -331,7 +337,8 @@ header {
     }
 
     .card {
-        width: 300px;
+        width: 250px;
+        height: auto;
     }
 
     .nav-links li {
