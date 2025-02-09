@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modes.css">
+    <link rel="stylesheet" href="fotter.css">
+    <title>Šahovska sekcija - OSBS</title>
+    <script defer src="script.js"></script>
+    <link rel="icon" type="image/png" href="osbs-logo.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="official-logo.png" alt="logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="section.html">O nama</a></li>
+                <li><a href="league.html">Rank lista</a></li>
+                <li><a href="tournaments.html">Turniri</a></li>
+                
+            </ul>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="theme-icon" src="sun.png" alt="Theme Icon">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>         
+    </header>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+        function toggleTheme() {
+        var body = document.body;
+        var themeIcon = document.getElementById('theme-icon');
+
+        // Provjerava trenutnu temu i prebacuje
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            themeIcon.src = 'moon.png';  // Ikona za svijetlu temu
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';  // Ikona za tamnu temu
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Provjera i postavljanje teme pri učitavanju stranice
+    window.onload = function() {
+        var savedTheme = localStorage.getItem('theme') || 'light';
+        var themeIcon = document.getElementById('theme-icon');
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';
+        } else {
+            document.body.classList.add('light-mode');
+            themeIcon.src = 'moon.png';
+        }
+    };
+    </script>
+
+
+    </style>
+    <br><br>
+<main class="section-main">
+    <section class="sekcija">
+        <h1 align="center">Šahovska sekcija OSBS</h1><br>
+        <div class="sekcija-text">
+        <p>Šahovska sekcija naše škole <br>okuplja učenike koji žele da razvijaju <br> strateško razmišljanje, takmičarski duh i ljubav prema ovoj drevnoj igri. <br> Časovi se održavaju jednom sedmično utorkom, <br>gdje polaznici kroz partije i analize uče osnovne i napredne tehnike šaha. <br>
+
+            Naši članovi redovno učestvuju na školskim i kantonalnim turnirima, <br>gdje postižu zapažene rezultate. <br> 
+            
+        <b>Princip rada ⬇️ </b></p>
+        <img src="grupnaslika.jpg" alt="slika1">
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards">
+            <div class="card">
+                <img src="match.jpeg" alt="Card 1" class="card-image">
+                <h3 class="card-title">Prijateljski mečevi</h3><br>
+                <p>
+                    Prijateljski mečevi u okviru šahovske sekcije odličan su način za unapređenje vještina bez pritiska takmičenja. Omogućavaju učenicima da primjene naučene strategije, analiziraju greške i razviju kreativno razmišljanje u opuštenoj atmosferi. Takođe, kroz ovakve partije jačaju se sportski duh, strpljenje i sposobnost donošenja odluka pod vremenskim ograničenjem. Osim toga, prijateljski mečevi podstiču druženje i timsku atmosferu, čineći učenje šaha zabavnijim.</p><br>
+            </div>
+            <div class="card">
+                <img src="https://static.scientificamerican.com/dam/m/1d63b10fbab8c5f3/original/brains_chess_abilities.jpg?m=1726752577.032" alt="Card 2" class="card-image">
+                <h3 class="card-title">Logičko razmišljanje</h3><br>
+                <p>U šahovskoj sekciji razvijamo logičko razmišljanje kroz puzle, otvaranja i završnice. Puzle pomažu u prepoznavanju taktičkih motiva i brzom donošenju odluka. Otvaranja učimo kroz osnovne principe umjesto napamet, dok se u završnicama fokusiramo na tehniku matiranja i realizaciju prednosti. Kroz ove vježbe, igrači postaju bolji u analizi, planiranju i prilagođavanju različitim situacijama na tabli.</p><br>
+            </div>
+            <div class="card">
+                <img src="druzenje.jpg" alt="Card 3" class="card-image">
+                <h3 class="card-title">Druženje i zabava</h3><br>
+                <p>
+                    Na šahovskoj sekciji svaki trening je spoj učenja, zabave i druženja. Kroz partije i izazove ne samo da razvijamo svoje šahovsko razmišljanje, već i uživamo u zajedničkim trenucima. Smijeh, prijateljska atmosfera i timski duh čine svaku partiju zanimljivom, bez obzira na ishod. Cilj nam nije samo poboljšati igru, već i stvoriti prostor gdje svi rado dolaze i napreduju zajedno.</p><br>
+            </div>
+        </div>
+    </section> 
+    <script src="script.js" defer></script>
+</main>
+<br><br><br>
+<footer>
+    <div class="footer-container">
+      <div class="footer-description">
+        <h3>Šahovska sekcija OSBS</h3>
+        <p>Naša šahovska sekcija promoviše logičko razmišljanje, sportski duh i ljubav prema šahu. Pridružite se i postanite dio naše zajednice!</p>
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="section.html">O nama</a></li>
+            <li><a href="league.html">Rank lista</a></li>
+            <li><a href="https://osbs.edu.ba/">Naša škola</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/behaudin.selmanovic" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@chess" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Šahovska sekcija OSBS - Osnovna škola "Behaudin Selmanović" Sva prava zadržana.</p>
+    </div>
+  </footer>
+</body>
+</html>

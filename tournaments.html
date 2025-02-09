@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Turnira - OSBS Chess Juniors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modes.css">
+    <link rel="stylesheet" href="fotter.css">
+    <link rel="icon" type="image/png" href="osbs-logo.png">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    <header>
+        <nav class="navbar">
+            <img src="official-logo.png" alt="logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="section.html">O nama</a></li>
+                <li><a href="league.html">Rank lista</a></li>
+                <li><a href="tournaments.html">Turniri</a></li>
+            </ul>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="theme-icon" src="sun.png" alt="Theme Icon">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>         
+    </header>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+        function toggleTheme() {
+        var body = document.body;
+        var themeIcon = document.getElementById('theme-icon');
+
+        // Provjerava trenutnu temu i prebacuje
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            themeIcon.src = 'moon.png';  // Ikona za svijetlu temu
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';  // Ikona za tamnu temu
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Provjera i postavljanje teme pri učitavanju stranice
+    window.onload = function() {
+        var savedTheme = localStorage.getItem('theme') || 'light';
+        var themeIcon = document.getElementById('theme-icon');
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';
+        } else {
+            document.body.classList.add('light-mode');
+            themeIcon.src = 'moon.png';
+        }
+    };
+    </script>
+
+<br>
+<br>
+<br>
+
+
+<main>
+    <section class="tournament-list">
+        <h1 align="center">Lista Turnira</h1><br>
+        <div class="tournament">
+            <h2>Kantonalno Takmičenje - Sarajevo</h2>
+            <p>Datum: Nepoznato</p>
+            <p>Lokacija: Hrasno, Sarajevo, Bosna i Hercegovina</p>
+            <p>Opis: Kantonalno takmičenje svih kategorija. </p>
+        </div>
+        <div class="tournament">
+            <h2>Školski šahovski turnir - OSBS</h2>
+            <p>Datum: 6.4.2025</p>
+            <p>Lokacija: Briješće, Sarajevo, Bosna i Hercegovina</p>
+            <p>Opis: Školski turnir povodom obilježavanja 6. aprila - Dan grada Sarajeva</p>
+        </div>
+    </section>
+</main>
+<br><br><br>
+<style>
+
+    .tournament-list {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .tournament {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        animation: slideIn 1s ease-in-out;
+    }
+
+    .tournament:hover {
+                transform: translateY(-4px);
+            }
+
+            .tournament:active {
+                transform: translateY(0);
+            }
+
+    .tournament-details {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .tournament-details:hover {
+        transform: scale(1.05);
+    }
+
+    .tournament.active .tournament-details {
+        display: block;
+    }
+
+
+
+    @media screen and (max-width: 600px) {
+        footer {
+            position: relative;
+        }
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links nav ul {
+        padding: 0;
+    }
+
+    .footer-links nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+</style>
+<footer>
+    <div class="footer-container">
+      <div class="footer-description">
+        <h3>Šahovska sekcija OSBS</h3>
+        <p>Naša šahovska sekcija promoviše logičko razmišljanje, sportski duh i ljubav prema šahu. Pridružite se i postanite dio naše zajednice!</p>
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="section.html">O nama</a></li>
+            <li><a href="league.html">Rank lista</a></li>
+            <li><a href="https://osbs.edu.ba/">Naša škola</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/behaudin.selmanovic" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@chess" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Šahovska sekcija OSBS - Osnovna škola "Behaudin Selmanović" Sva prava zadržana.</p>
+    </div>
+  </footer>
+</body>
+</html>

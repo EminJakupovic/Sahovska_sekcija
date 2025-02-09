@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSBS Chess Juniors - Šahovska Sekcija OSBS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modes.css">
+    <link rel="stylesheet" href="fotter.css">
+    <link rel="stylesheet" href="other.css">
+    <link rel="icon" type="image/png" href="osbs-logo.png">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    <header>
+        <nav class="navbar">
+            <img src="official-logo.png" alt="logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="section.html">O nama</a></li>
+                <li><a href="league.html">Rank lista</a></li>
+                <li><a href="tournaments.html">Turniri</a></li>
+                
+            </ul>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <img id="theme-icon" src="sun.png" alt="Theme Icon">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>         
+    </header>
+    <br><br><br>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            var hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        }
+        function toggleTheme() {
+        var body = document.body;
+        var themeIcon = document.getElementById('theme-icon');
+
+
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            themeIcon.src = 'moon.png'; 
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';  
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+
+    window.onload = function() {
+        var savedTheme = localStorage.getItem('theme') || 'light';
+        var themeIcon = document.getElementById('theme-icon');
+
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeIcon.src = 'sun.png';
+        } else {
+            document.body.classList.add('light-mode');
+            themeIcon.src = 'moon.png';
+        }
+    };
+    </script>
+    <section class="league-info">
+        <h2>Šahovska liga OSBS</h2>
+        <h4>Mjesto za vježbu, učenje i savladavanje novih vještina!</h4><br>
+        <div class="image-gallery">
+            <img src="https://cdn11.bigcommerce.com/s-5p6k1/images/stencil/original/image-manager/chess-sets-banner.jpg" alt="Image 1">
+        </div>
+    </section>
+    <style>
+    .league-info {
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .league-info h2 {
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .image-gallery img {
+        width: 900px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+        .image-gallery img {
+            width: 100%;
+        }
+    }
+
+    .ranking {
+        animation: slideIn 2s ease-in-out;
+    }
+
+    .ranking h2 {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    </style>
+<br><br><br>
+<section class="ranking">
+    <h2>Rang Lista</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Pozicija</th>
+                <th>Igrač</th>
+                <th>Bodovi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Daris Čarković</td><td>0</td></tr>
+            <tr><td>2</td><td>Emin Jakupović</td><td>0</td></tr>
+            <tr><td>3</td><td>Onur Huseinbašić</td><td>0</td></tr>
+            <tr><td>4</td><td>Muhammed Durmo</td><td>0</td></tr>
+            <tr><td>5</td><td>Davud Šahinović</td><td>0</td></tr>
+            <tr><td>6</td><td>Nedžla Huseinbašić</td><td>0</td></tr>
+            <tr><td>7</td><td>Merjem Selimović</td><td>0</td></tr>
+            <tr><td>8</td><td>Dženan Rahman</td><td>0</td></tr>
+            <tr><td>9</td><td>Lamia Vehabović</td><td>0</td></tr>
+            <tr><td>10</td><td>Ahmed Grabus</td><td>0</td></tr>
+        </tbody>
+    </table>
+</section>
+<br><br><br><br>
+<footer>
+    <div class="footer-container">
+      <div class="footer-description">
+        <h3>Šahovska sekcija OSBS</h3>
+        <p>Naša šahovska sekcija promoviše logičko razmišljanje, sportski duh i ljubav prema šahu. Pridružite se i postanite dio naše zajednice!</p>
+      </div>
+      <div class="footer-links">
+        <nav>
+          <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="section.html">O nama</a></li>
+            <li><a href="league.html">Rank lista</a></li>
+            <li><a href="https://osbs.edu.ba/">Naša škola</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/behaudin.selmanovic" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/@chess" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Šahovska sekcija OSBS - Osnovna škola "Behaudin Selmanović" Sva prava zadržana.</p>
+    </div>
+  </footer>
+</body>
+</html>
